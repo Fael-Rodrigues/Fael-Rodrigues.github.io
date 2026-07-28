@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafael Rodrigues | Portfólio de Dados</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+
+      <!-- Header -->
+      <header class="w-full p-4 bg-white shadow-md fixed top-0 z-50">
+        <nav class="container mx-auto flex justify-between items-center">
+          <h1 class="text-2xl font-bold text-blue-700">Rafael Rodrigues</h1>
+          <ul class="flex space-x-6">
+            <li><a href="#home" class="hover:text-blue-700 font-medium">Início</a></li>
+            <li><a href="#projetos" class="hover:text-blue-700 font-medium">Projetos</a></li>
+            <li><a href="#sobre" class="hover:text-blue-700 font-medium">Sobre</a></li>
+            <li><a href="#contato" class="hover:text-blue-700 font-medium">Contato</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Hero Section -->
+      <section id="home" class="relative h-[70vh] flex items-center justify-center text-center bg-cover bg-center pt-16" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1920&q=80');">
+        <div class="relative z-10 text-white p-8 rounded-lg max-w-2xl">
+          <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Transformando Dados em Decisões Estratégicas</h2>
+          <p class="text-xl mb-8 text-gray-200">Analista de Dados com foco em Logística e Automação.</p>
+          <a href="#projetos" class="bg-blue-600 hover:bg-blue-700 text-white text-lg font-semibold px-8 py-4 rounded-full transition duration-300 inline-block">Ver Projetos</a>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projetos" class="container mx-auto py-16 px-4">
+        <h2 class="text-4xl font-bold text-center mb-12">Meus Projetos</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+          
+          <!-- Cyclistic Project Card -->
+          <div class="bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200 flex flex-col justify-between">
+            <div class="p-6">
+              <h3 class="text-2xl font-semibold mb-2 text-blue-800">Cyclistic Bike Share Analysis</h3>
+              <p class="text-gray-600 mb-4 text-sm">Análise de dados de compartilhamento de bicicletas com foco em conversão de usuários casuais em membros anuais.</p>
+              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">Stack: Python (ETL) • Power BI • SQL</p>
+            </div>
+            <div class="px-6 pb-6 flex justify-between items-center bg-gray-50 pt-4">
+              <a href="https://github.com/Fael-Rodrigues/Cyclistic-bike-share-analysis" target="_blank" rel="noopener noreferrer" class="text-blue-600 border border-blue-600 px-4 py-2 rounded hover:bg-blue-50 font-medium text-sm transition">Ver no GitHub</a>
+            </div>
+          </div>
+
+          <!-- Placeholder for future projects -->
+          <div class="bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200 opacity-75 flex flex-col justify-between">
+            <div class="p-6">
+              <span class="inline-block bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded mb-2 font-semibold">Em Breve</span>
+              <h3 class="text-2xl font-semibold mb-2">Novo Projeto de Logística</h3>
+              <p class="text-gray-600 mb-4 text-sm">Próximo case focado em otimização de rotas e predição de estoque com Python e SQL.</p>
+              <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4">Tecnologias: Python, SQL, BI</p>
+            </div>
+            <div class="px-6 pb-6 bg-gray-50 pt-4">
+              <button disabled class="text-gray-400 border border-gray-300 px-4 py-2 rounded text-sm cursor-not-allowed w-full">Em Desenvolvimento</button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="sobre" class="bg-blue-700 text-white py-16 px-4">
+        <div class="container mx-auto text-center max-w-3xl">
+          <h2 class="text-4xl font-bold mb-8">Sobre Mim</h2>
+          <p class="text-lg leading-relaxed text-blue-100">Sou um profissional com experiência em Logística, Planejamento de Materiais e Gestão de Estoques, com uma visão analítica voltada para a melhoria contínua e tomada de decisão baseada em dados. Atualmente, estou ampliando minha formação em Tecnologia e Ciência de Dados, aprofundando conhecimentos em Python, SQL, Power BI e automação de processos. Meu objetivo é unir minha experiência operacional com habilidades em análise de dados para gerar eficiência e decisões estratégicas.</p>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contato" class="container mx-auto py-16 text-center px-4">
+        <h2 class="text-4xl font-bold mb-8">Contato</h2>
+        <div class="flex justify-center space-x-6 mb-8">
+          <a href="https://www.linkedin.com/in/rafael-r-nunes" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 font-medium">LinkedIn</a>
+          <a href="https://github.com/Fael-Rodrigues" target="_blank" rel="noopener noreferrer" class="text-gray-800 hover:text-gray-600 font-medium">GitHub</a>
+        </div>
+        <p class="text-gray-600 text-lg">Entre em contato para colaborações ou oportunidades!</p>
+      </section>
+
+      <!-- Footer -->
+      <footer class="w-full p-4 bg-gray-800 text-white text-center">
+        <p>&copy; 2026 Rafael Rodrigues. Todos os direitos reservados.</p>
+      </footer>
+
+</body>
+</html>
