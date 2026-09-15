@@ -15,8 +15,8 @@
           <h1 class="text-xl font-bold text-blue-700 tracking-tight">Rafael Rodrigues</h1>
           <ul class="flex space-x-8 text-sm font-medium">
             <li><a href="#home" class="hover:text-blue-600 transition">Início</a></li>
-            <li><a href="#projetos" class="hover:text-blue-600 transition">Projetos</a></li>
             <li><a href="#sobre" class="hover:text-blue-600 transition">Sobre Mim</a></li>
+            <li><a href="#projetos" class="hover:text-blue-600 transition">Projetos</a></li>
             <li><a href="#contato" class="hover:text-blue-600 transition">Contato</a></li>
           </ul>
         </nav>
@@ -32,6 +32,19 @@
         </div>
       </section>
 
+      <!-- About Section (Realocada para antes de Projetos) -->
+      <section id="sobre" class="bg-slate-900 text-white py-20 px-6">
+        <div class="container mx-auto max-w-3xl text-center">
+          <h2 class="text-3xl font-bold tracking-tight mb-8">Sobre Mim</h2>
+          <p class="text-slate-300 text-base md:text-lg leading-relaxed font-light mb-6">
+            Profissional com sólida experiência em Logística, Planejamento de Materiais e Gestão de Estoques, com uma visão analítica voltada para a melhoria contínua e tomada de decisão baseada em dados. 
+          </p>
+          <p class="text-slate-300 text-base md:text-lg leading-relaxed font-light">
+            Atualmente graduando em Análise e Desenvolvimento de Sistemas, aprofundo conhecimentos em Python, SQL, Power BI e automação de processos para unir a vivência operacional a soluções eficientes de dados.
+          </p>
+        </div>
+      </section>
+
       <!-- Projects Section -->
       <section id="projetos" class="container mx-auto py-20 px-6 max-w-5xl">
         <div class="text-center mb-14">
@@ -44,7 +57,7 @@
           <!-- Cyclistic Project Card -->
           <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition duration-300 overflow-hidden flex flex-col justify-between">
             <div>
-              <!-- Logo do Projeto -->
+              <!-- Logo / Capa do Projeto -->
               <div class="w-full h-48 bg-slate-50 flex items-center justify-center border-b border-slate-100 p-4">
                 <img src="cyclistic-logo.png" alt="Cyclistic Logo" class="max-h-full max-w-full object-contain">
               </div>
@@ -70,36 +83,56 @@
               </div>
             </div>
 
-            <!-- Botões de Ação do Projeto -->
+            <!-- Botões de Ação do Projeto Cyclistic -->
             <div class="px-8 pb-8 pt-0 grid grid-cols-2 gap-3">
               <a href="https://github.com/Fael-Rodrigues/Cyclistic-bike-share-analysis" target="_blank" rel="noopener noreferrer" class="text-center bg-slate-100 hover:bg-slate-200 text-slate-800 font-medium py-2.5 px-3 rounded-xl text-sm transition duration-300">GitHub</a>
               <a href="https://app.powerbi.com/view?r=eyJrIjoiZmRmNDlhZTYtMGE0NC00MGVjLWE5ZjUtZWEzMDQxOWY4OWI3IiwidCI6IjY1OWNlMmI4LTA3MTQtNDE5OC04YzM4LWRjOWI2MGFhYmI1NyJ9" target="_blank" rel="noopener noreferrer" class="text-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 px-3 rounded-xl text-sm transition duration-300 shadow-sm">Ver Dashboard</a>
             </div>
           </div>
 
-          <!-- Placeholder for future projects -->
-          <div class="bg-white/60 rounded-2xl border border-dashed border-slate-300 p-8 flex flex-col justify-between items-center text-center">
-            <div class="my-auto">
-              <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center mx-auto mb-4 text-slate-400 font-bold">+</div>
-              <h3 class="text-lg font-semibold text-slate-700 mb-2">Próximo Projeto em Breve</h3>
-              <p class="text-slate-500 text-sm max-w-sm">Novas análises focadas em otimização de rotas, logística e automação de processos com Python e SQL estão em desenvolvimento.</p>
+          <!-- LogiFast Project Card -->
+          <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition duration-300 overflow-hidden flex flex-col justify-between">
+            <div>
+              <!-- Capa / Header do Projeto LogiFast -->
+              <div class="w-full h-48 bg-slate-900 flex flex-col items-center justify-center border-b border-slate-100 p-4 text-white relative">
+                <span class="text-3xl mb-1">🚚</span>
+                <h4 class="text-2xl font-black tracking-wider text-blue-400">LOGIFAST</h4>
+                <span class="text-xs text-slate-400 font-medium uppercase tracking-widest mt-1">Análise Logística & OTD</span>
+              </div>
+              
+              <div class="p-8">
+                <div class="flex items-center justify-between mb-4">
+                  <span class="bg-amber-50 text-amber-700 text-xs px-3 py-1 rounded-full font-semibold">Análise de Operações</span>
+                  <span class="text-xs text-slate-400 font-medium">SQL & Modelagem</span>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">LogiFast - Análise de Entregas</h3>
+                <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                  <strong>Objetivo:</strong> Diagnosticar gargalos em mais de 53 mil pedidos operacionais, avaliando taxas de atraso, severidade e gargalos operacionais.
+                </p>
+                <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                  <strong>Principais entregas:</strong> Modelagem em Star Schema (MySQL), ETL com Views otimizadas e investigação de 18 perguntas estratégicas de negócio.
+                </p>
+                
+                <div class="flex flex-wrap gap-2 mb-2">
+                  <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded-md font-medium">SQL (MySQL)</span>
+                  <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded-md font-medium">Star Schema</span>
+                  <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded-md font-medium">ETL & VIEWs</span>
+                  <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded-md font-medium">KPIs Logísticos</span>
+                </div>
+              </div>
             </div>
-            <span class="mt-6 text-xs text-slate-400 uppercase tracking-widest font-semibold">Em Desenvolvimento</span>
+
+            <!-- Botões de Ação do Projeto LogiFast -->
+            <div class="px-8 pb-8 pt-0 grid grid-cols-2 gap-3">
+              <a href="https://github.com/Fael-Rodrigues/logifast-analytics-sql" target="_blank" rel="noopener noreferrer" class="text-center bg-slate-100 hover:bg-slate-200 text-slate-800 font-medium py-2.5 px-3 rounded-xl text-sm transition duration-300">GitHub</a>
+              
+              <!-- Botão do Power BI Desabilitado -->
+              <button disabled class="text-center bg-slate-200 text-slate-400 cursor-not-allowed font-medium py-2.5 px-3 rounded-xl text-sm transition duration-300 relative group" title="Dashboard em desenvolvimento">
+                Dashboard (Em breve)
+              </button>
+            </div>
           </div>
 
-        </div>
-      </section>
-
-      <!-- About Section -->
-      <section id="sobre" class="bg-slate-900 text-white py-20 px-6">
-        <div class="container mx-auto max-w-3xl text-center">
-          <h2 class="text-3xl font-bold tracking-tight mb-8">Sobre Mim</h2>
-          <p class="text-slate-300 text-base md:text-lg leading-relaxed font-light mb-6">
-            Profissional com sólida experiência em Logística, Planejamento de Materiais e Gestão de Estoques, com uma visão analítica voltada para a melhoria contínua e tomada de decisão baseada em dados. 
-          </p>
-          <p class="text-slate-300 text-base md:text-lg leading-relaxed font-light">
-            Atualmente graduando em Análise e Sistemas de Desenvolvimento, aprofundo conhecimentos em Python, SQL, Power BI e automação de processos para unir a vivência operacional a soluções eficientes de dados.
-          </p>
         </div>
       </section>
 
