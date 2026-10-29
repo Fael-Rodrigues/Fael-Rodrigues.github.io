@@ -3,78 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rafael Rodrigues | Portfólio de Dados & Logística</title>
+    <title>Rafael Rodrigues | Portfólio de Dados &amp; Logística</title>
+
+    <!-- SEO e prévia ao compartilhar (LinkedIn, WhatsApp) -->
+    <meta name="description" content="Portfólio de Rafael Rodrigues, analista de dados com experiência em logística, PCP e gestão de estoques. Projetos em Python, SQL e Power BI.">
+    <meta name="author" content="Rafael Rodrigues">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Rafael Rodrigues | Portfólio de Dados &amp; Logística">
+    <meta property="og:description" content="Análise de dados aplicada à logística, PCP e automação de processos. Projetos em Python, SQL e Power BI.">
+    <!-- O LinkedIn exige endereço completo: troque pela URL do seu site, ex.: https://fael-rodrigues.github.io/og-image.png -->
+    <meta property="og:image" content="og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d4ed8'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='white' text-anchor='middle'%3ERR%3C/text%3E%3C/svg%3E">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      /* Animação suave ao rolar */
+      .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+      .reveal.visible { opacity: 1; transform: none; }
+      @media (prefers-reduced-motion: reduce) {
+        .reveal { opacity: 1; transform: none; transition: none; }
+      }
+      /* Compensa o menu fixo ao clicar nos links */
+      section[id] { scroll-margin-top: 72px; }
+    </style>
 </head>
 <body class="min-h-screen bg-slate-50 text-slate-800 antialiased">
 
       <!-- Header -->
       <header class="w-full bg-white/90 backdrop-blur-md shadow-sm fixed top-0 z-50 border-b border-slate-100">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center max-w-5xl">
-          <h1 class="text-xl font-bold text-blue-700 tracking-tight">Rafael Rodrigues</h1>
-          <ul class="flex space-x-8 text-sm font-medium">
+          <a href="#home" class="text-xl font-bold text-blue-700 tracking-tight">Rafael Rodrigues</a>
+
+          <!-- Menu do computador -->
+          <ul class="hidden md:flex space-x-8 text-sm font-medium">
             <li><a href="#home" class="hover:text-blue-600 transition">Início</a></li>
             <li><a href="#sobre" class="hover:text-blue-600 transition">Sobre Mim</a></li>
+            <li><a href="#competencias" class="hover:text-blue-600 transition">Competências</a></li>
             <li><a href="#projetos" class="hover:text-blue-600 transition">Projetos</a></li>
             <li><a href="#contato" class="hover:text-blue-600 transition">Contato</a></li>
           </ul>
+
+          <!-- Botão do menu no celular -->
+          <button id="menu-btn" class="md:hidden p-2 -mr-2 rounded-lg text-slate-700 hover:bg-slate-100 transition" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-mobile">
+            <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+            <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+          </button>
         </nav>
+
+        <!-- Menu do celular -->
+        <ul id="menu-mobile" class="md:hidden hidden border-t border-slate-100 bg-white px-6 py-2 text-base font-medium">
+          <li><a href="#home" class="block py-3 border-b border-slate-100 hover:text-blue-600">Início</a></li>
+          <li><a href="#sobre" class="block py-3 border-b border-slate-100 hover:text-blue-600">Sobre Mim</a></li>
+          <li><a href="#competencias" class="block py-3 border-b border-slate-100 hover:text-blue-600">Competências</a></li>
+          <li><a href="#projetos" class="block py-3 border-b border-slate-100 hover:text-blue-600">Projetos</a></li>
+          <li><a href="#contato" class="block py-3 hover:text-blue-600">Contato</a></li>
+        </ul>
       </header>
 
       <!-- Hero Section -->
-      <section id="home" class="relative h-[75vh] flex items-center justify-center text-center bg-slate-900 text-white px-6 pt-16" style="background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center;">
+      <section id="home" class="relative min-h-[75vh] flex items-center justify-center text-center bg-slate-900 text-white px-6 pt-24 pb-16" style="background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center;">
         <div class="relative z-10 max-w-3xl mx-auto">
           <span class="inline-block bg-blue-500/20 text-blue-400 border border-blue-500/30 text-xs px-3 py-1 rounded-full mb-4 font-semibold uppercase tracking-wider">Portfólio Profissional</span>
-          <h2 class="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight leading-tight">Transformando Dados em Decisões Estratégicas</h2>
-          <p class="text-lg md:text-xl mb-8 text-slate-300 font-light">Analista de Dados em transição da Logística, unindo visão operacional e inteligência de negócios.</p>
-          <a href="#projetos" class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-8 py-3.5 rounded-xl shadow-lg shadow-blue-600/30 transition duration-300 inline-block">Ver Meus Projetos</a>
+          <h1 class="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight leading-tight">Transformando Dados em Decisões Estratégicas</h1>
+          <p class="text-lg md:text-xl mb-8 text-slate-300 font-light">Analista de Dados com bagagem em Logística e PCP, unindo visão operacional e inteligência de negócios.</p>
+          <div class="flex flex-col sm:flex-row gap-3 justify-center">
+            <a href="#projetos" class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-8 py-3.5 rounded-xl shadow-lg shadow-blue-600/30 transition duration-300">Ver Meus Projetos</a>
+            <a href="curriculo.pdf" download="Rafael-Rodrigues-Curriculo.pdf" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-medium px-8 py-3.5 rounded-xl transition duration-300">Baixar Currículo</a>
+          </div>
         </div>
       </section>
 
-      <!-- About Section (Realocada para antes de Projetos) -->
-      <section id="sobre" class="bg-slate-900 text-white py-20 px-6">
-        <div class="container mx-auto max-w-3xl text-center">
-          <h2 class="text-3xl font-bold tracking-tight mb-8">Sobre Mim</h2>
-          <p class="text-slate-300 text-base md:text-lg leading-relaxed font-light mb-6">
-            Profissional com sólida experiência em Logística, Planejamento de Materiais e Gestão de Estoques, com uma visão analítica voltada para a melhoria contínua e tomada de decisão baseada em dados. 
-          </p>
-          <p class="text-slate-300 text-base md:text-lg leading-relaxed font-light">
-            Atualmente graduando em Análise e Desenvolvimento de Sistemas, aprofundo conhecimentos em Python, SQL, Power BI e automação de processos para unir a vivência operacional a soluções eficientes de dados.
-          </p>
+      <!-- About Section -->
+      <section id="sobre" class="bg-white py-20 px-6 border-b border-slate-100">
+        <div class="container mx-auto max-w-5xl grid md:grid-cols-[auto,1fr] gap-10 md:gap-14 items-center reveal">
+          <!-- Foto de perfil -->
+          <div class="mx-auto">
+            <div class="relative w-44 h-44 md:w-56 md:h-56">
+              <div class="absolute inset-0 rounded-full bg-gradient-to-br from-blue-600 to-slate-800 flex items-center justify-center text-white text-5xl font-bold">RR</div>
+              <img src="foto.jpg" alt="Foto de Rafael Rodrigues" class="relative w-full h-full rounded-full object-cover ring-4 ring-blue-50 shadow-lg" onerror="this.remove()">
+            </div>
+          </div>
+
+          <div class="text-center md:text-left">
+            <h2 class="text-3xl font-bold tracking-tight text-slate-900 mb-6">Sobre Mim</h2>
+            <p class="text-slate-600 text-base md:text-lg leading-relaxed mb-5">
+              Profissional com sólida experiência em Logística, Planejamento de Materiais e Gestão de Estoques, com uma visão analítica voltada para a melhoria contínua e tomada de decisão baseada em dados.
+            </p>
+            <p class="text-slate-600 text-base md:text-lg leading-relaxed mb-6">
+              Atualmente graduando em Análise e Desenvolvimento de Sistemas, aprofundo conhecimentos em Python, SQL, Power BI e automação de processos para unir a vivência operacional a soluções eficientes de dados.
+            </p>
+            <div class="flex flex-wrap gap-2 justify-center md:justify-start">
+              <span class="bg-blue-50 text-blue-700 text-sm px-3 py-1.5 rounded-full font-medium">🎓 Análise e Desenvolvimento de Sistemas</span>
+              <span class="bg-blue-50 text-blue-700 text-sm px-3 py-1.5 rounded-full font-medium">📦 Vivência em operações logísticas</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="competencias" class="bg-slate-50 py-20 px-6">
+        <div class="container mx-auto max-w-5xl">
+          <div class="text-center mb-12 reveal">
+            <h2 class="text-3xl font-bold tracking-tight text-slate-900 mb-2">Competências</h2>
+            <p class="text-slate-500">Ferramentas técnicas aplicadas a quem conhece a operação por dentro.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white rounded-2xl border border-slate-200/80 p-8 reveal">
+              <h3 class="text-lg font-bold text-slate-900 mb-5">Ferramentas</h3>
+              <ul class="grid grid-cols-2 gap-3 text-sm">
+                <li class="flex items-center gap-2.5 bg-slate-50 rounded-xl px-4 py-3"><span class="text-xl">🐍</span><span class="font-medium">Python</span></li>
+                <li class="flex items-center gap-2.5 bg-slate-50 rounded-xl px-4 py-3"><span class="text-xl">🗄️</span><span class="font-medium">SQL (MySQL)</span></li>
+                <li class="flex items-center gap-2.5 bg-slate-50 rounded-xl px-4 py-3"><span class="text-xl">📊</span><span class="font-medium">Power BI</span></li>
+                <li class="flex items-center gap-2.5 bg-slate-50 rounded-xl px-4 py-3"><span class="text-xl">📗</span><span class="font-medium">Excel</span></li>
+                <li class="flex items-center gap-2.5 bg-slate-50 rounded-xl px-4 py-3"><span class="text-xl">⚙️</span><span class="font-medium">Automação</span></li>
+                <li class="flex items-center gap-2.5 bg-slate-50 rounded-xl px-4 py-3"><span class="text-xl">🧩</span><span class="font-medium">Modelagem de Dados</span></li>
+              </ul>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-slate-200/80 p-8 reveal">
+              <h3 class="text-lg font-bold text-slate-900 mb-5">Áreas de Negócio</h3>
+              <ul class="grid grid-cols-2 gap-3 text-sm">
+                <li class="flex items-center gap-2.5 bg-slate-50 rounded-xl px-4 py-3"><span class="text-xl">🚚</span><span class="font-medium">Logística</span></li>
+                <li class="flex items-center gap-2.5 bg-slate-50 rounded-xl px-4 py-3"><span class="text-xl">🏭</span><span class="font-medium">PCP</span></li>
+                <li class="flex items-center gap-2.5 bg-slate-50 rounded-xl px-4 py-3"><span class="text-xl">📦</span><span class="font-medium">Gestão de Estoques</span></li>
+                <li class="flex items-center gap-2.5 bg-slate-50 rounded-xl px-4 py-3"><span class="text-xl">🗓️</span><span class="font-medium">Planejamento de Materiais</span></li>
+                <li class="flex items-center gap-2.5 bg-slate-50 rounded-xl px-4 py-3"><span class="text-xl">🎯</span><span class="font-medium">KPIs Logísticos</span></li>
+                <li class="flex items-center gap-2.5 bg-slate-50 rounded-xl px-4 py-3"><span class="text-xl">🔄</span><span class="font-medium">Melhoria Contínua</span></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
       <!-- Projects Section -->
-      <section id="projetos" class="container mx-auto py-20 px-6 max-w-5xl">
-        <div class="text-center mb-14">
+      <section id="projetos" class="bg-white py-20 px-6 border-y border-slate-100">
+        <div class="container mx-auto max-w-5xl">
+        <div class="text-center mb-14 reveal">
           <h2 class="text-3xl font-bold tracking-tight text-slate-900 mb-2">Portfólio e Principais Projetos</h2>
           <p class="text-slate-500">Soluções analíticas focadas em resolver problemas reais de negócio.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          
-          <!-- Cyclistic Project Card -->
-          <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition duration-300 overflow-hidden flex flex-col justify-between">
+
+          <!-- LogiFast Project Card -->
+          <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-lg hover:-translate-y-1 transition duration-300 overflow-hidden flex flex-col justify-between reveal">
             <div>
-              <!-- Logo / Capa do Projeto -->
+              <!-- Capa / Logo do Projeto LogiFast -->
+              <div class="w-full h-48 bg-white flex items-center justify-center border-b border-slate-100 p-8">
+                <img src="logifast-logo.png" alt="Logo LogiFast" class="max-h-full max-w-full object-contain">
+              </div>
+
+              <div class="p-8">
+                <div class="flex items-center justify-between mb-4">
+                  <span class="bg-amber-50 text-amber-700 text-xs px-3 py-1 rounded-full font-semibold">Análise de Operações</span>
+                  <span class="text-xs text-slate-400 font-medium">SQL &amp; Power BI</span>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-4">LogiFast - Análise de Entregas</h3>
+
+                <!-- Resultados em destaque -->
+                <div class="grid grid-cols-3 gap-2 mb-5 text-center">
+                  <div class="bg-slate-50 rounded-xl py-3 px-1">
+                    <p class="text-lg font-extrabold text-blue-700">53,6 mil</p>
+                    <p class="text-[11px] text-slate-500 leading-tight">pedidos analisados</p>
+                  </div>
+                  <div class="bg-slate-50 rounded-xl py-3 px-1">
+                    <p class="text-lg font-extrabold text-blue-700">12,9%</p>
+                    <p class="text-[11px] text-slate-500 leading-tight">taxa de atraso</p>
+                  </div>
+                  <div class="bg-slate-50 rounded-xl py-3 px-1">
+                    <p class="text-lg font-extrabold text-blue-700">18</p>
+                    <p class="text-[11px] text-slate-500 leading-tight">perguntas de negócio</p>
+                  </div>
+                </div>
+
+                <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                  <strong>Objetivo:</strong> Diagnosticar gargalos em mais de 53 mil pedidos, avaliando taxas de atraso, severidade e os pontos críticos da operação.
+                </p>
+                <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                  <strong>Principais entregas:</strong> Modelagem em Star Schema (MySQL), ETL com Views otimizadas, dashboard em Power BI e recomendações priorizadas para a gestão.
+                </p>
+
+                <div class="flex flex-wrap gap-2 mb-2">
+                  <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded-md font-medium">SQL (MySQL)</span>
+                  <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded-md font-medium">Star Schema</span>
+                  <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded-md font-medium">ETL &amp; VIEWs</span>
+                  <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded-md font-medium">Power BI</span>
+                  <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded-md font-medium">KPIs Logísticos</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="px-8 pb-8 pt-0 grid grid-cols-2 gap-3">
+              <a href="https://github.com/Fael-Rodrigues/Logifast-analytics" target="_blank" rel="noopener noreferrer" class="text-center bg-slate-100 hover:bg-slate-200 text-slate-800 font-medium py-2.5 px-3 rounded-xl text-sm transition duration-300">GitHub</a>
+              <a href="https://app.powerbi.com/view?r=eyJrIjoiNjgxZmRlYWEtMGZhNy00YmJkLTk0ODktYjZiZThmZmZkY2E4IiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9" target="_blank" rel="noopener noreferrer" class="text-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 px-3 rounded-xl text-sm transition duration-300 shadow-sm">Ver Dashboard</a>
+            </div>
+          </div>
+
+          <!-- Cyclistic Project Card -->
+          <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-lg hover:-translate-y-1 transition duration-300 overflow-hidden flex flex-col justify-between reveal">
+            <div>
               <div class="w-full h-48 bg-slate-50 flex items-center justify-center border-b border-slate-100 p-4">
                 <img src="cyclistic-logo.png" alt="Cyclistic Logo" class="max-h-full max-w-full object-contain">
               </div>
-              
+
               <div class="p-8">
                 <div class="flex items-center justify-between mb-4">
                   <span class="bg-blue-50 text-blue-700 text-xs px-3 py-1 rounded-full font-semibold">Case de Negócio</span>
-                  <span class="text-xs text-slate-400 font-medium">Power BI & Python</span>
+                  <span class="text-xs text-slate-400 font-medium">Power BI &amp; Python</span>
                 </div>
-                <h3 class="text-xl font-bold text-slate-900 mb-3">Cyclistic Bike Share Analysis</h3>
+                <h3 class="text-xl font-bold text-slate-900 mb-4">Cyclistic Bike Share Analysis</h3>
+
+                <!-- Resultados em destaque -->
+                <div class="grid grid-cols-3 gap-2 mb-5 text-center">
+                  <div class="bg-slate-50 rounded-xl py-3 px-1">
+                    <p class="text-lg font-extrabold text-blue-700">2</p>
+                    <p class="text-[11px] text-slate-500 leading-tight">perfis comparados</p>
+                  </div>
+                  <div class="bg-slate-50 rounded-xl py-3 px-1">
+                    <p class="text-lg font-extrabold text-blue-700">ETL</p>
+                    <p class="text-[11px] text-slate-500 leading-tight">em Python</p>
+                  </div>
+                  <div class="bg-slate-50 rounded-xl py-3 px-1">
+                    <p class="text-lg font-extrabold text-blue-700">1</p>
+                    <p class="text-[11px] text-slate-500 leading-tight">dashboard interativo</p>
+                  </div>
+                </div>
+
                 <p class="text-slate-600 text-sm leading-relaxed mb-4">
                   <strong>Objetivo:</strong> Identificar padrões de comportamento de viagens para direcionar a estratégia de conversão de usuários casuais em membros anuais.
                 </p>
                 <p class="text-slate-600 text-sm leading-relaxed mb-6">
                   <strong>Principais entregas:</strong> Tratamento de dados em Python, modelagem e dashboard dinâmico para análise de duração de viagens e sazonalidade.
                 </p>
-                
+
                 <div class="flex flex-wrap gap-2 mb-2">
                   <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded-md font-medium">Python (ETL)</span>
                   <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded-md font-medium">Power BI</span>
@@ -83,73 +252,75 @@
               </div>
             </div>
 
-            <!-- Botões de Ação do Projeto Cyclistic -->
             <div class="px-8 pb-8 pt-0 grid grid-cols-2 gap-3">
               <a href="https://github.com/Fael-Rodrigues/Cyclistic-bike-share-analysis" target="_blank" rel="noopener noreferrer" class="text-center bg-slate-100 hover:bg-slate-200 text-slate-800 font-medium py-2.5 px-3 rounded-xl text-sm transition duration-300">GitHub</a>
               <a href="https://app.powerbi.com/view?r=eyJrIjoiZmRmNDlhZTYtMGE0NC00MGVjLWE5ZjUtZWEzMDQxOWY4OWI3IiwidCI6IjY1OWNlMmI4LTA3MTQtNDE5OC04YzM4LWRjOWI2MGFhYmI1NyJ9" target="_blank" rel="noopener noreferrer" class="text-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 px-3 rounded-xl text-sm transition duration-300 shadow-sm">Ver Dashboard</a>
             </div>
           </div>
 
-          <!-- LogiFast Project Card -->
-          <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition duration-300 overflow-hidden flex flex-col justify-between">
-            <div>
-              <!-- Capa / Header do Projeto LogiFast -->
-              <div class="w-full h-48 bg-slate-900 flex flex-col items-center justify-center border-b border-slate-100 p-4 text-white relative">
-                <span class="text-3xl mb-1">🚚</span>
-                <h4 class="text-2xl font-black tracking-wider text-blue-400">LOGIFAST</h4>
-                <span class="text-xs text-slate-400 font-medium uppercase tracking-widest mt-1">Análise Logística & OTD</span>
-              </div>
-              
-              <div class="p-8">
-                <div class="flex items-center justify-between mb-4">
-                  <span class="bg-amber-50 text-amber-700 text-xs px-3 py-1 rounded-full font-semibold">Análise de Operações</span>
-                  <span class="text-xs text-slate-400 font-medium">SQL & Modelagem</span>
-                </div>
-                <h3 class="text-xl font-bold text-slate-900 mb-3">LogiFast - Análise de Entregas</h3>
-                <p class="text-slate-600 text-sm leading-relaxed mb-4">
-                  <strong>Objetivo:</strong> Diagnosticar gargalos em mais de 53 mil pedidos operacionais, avaliando taxas de atraso, severidade e gargalos operacionais.
-                </p>
-                <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                  <strong>Principais entregas:</strong> Modelagem em Star Schema (MySQL), ETL com Views otimizadas e investigação de 18 perguntas estratégicas de negócio.
-                </p>
-                
-                <div class="flex flex-wrap gap-2 mb-2">
-                  <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded-md font-medium">SQL (MySQL)</span>
-                  <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded-md font-medium">Star Schema</span>
-                  <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded-md font-medium">ETL & VIEWs</span>
-                  <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded-md font-medium">KPIs Logísticos</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Botões de Ação do Projeto LogiFast -->
-            <div class="px-8 pb-8 pt-0 grid grid-cols-2 gap-3">
-              <a href="https://github.com/Fael-Rodrigues/Logifast-analytics" target="_blank" rel="noopener noreferrer" class="text-center bg-slate-100 hover:bg-slate-200 text-slate-800 font-medium py-2.5 px-3 rounded-xl text-sm transition duration-300">GitHub</a>
-              
-              <!-- Botão do Power BI Desabilitado -->
-              <button disabled class="text-center bg-slate-200 text-slate-400 cursor-not-allowed font-medium py-2.5 px-3 rounded-xl text-sm transition duration-300 relative group" title="Dashboard em desenvolvimento">
-                Dashboard (Em breve)
-              </button>
-            </div>
+          <!-- Próximos projetos -->
+          <div class="rounded-2xl border-2 border-dashed border-slate-200 p-8 flex flex-col items-center justify-center text-center reveal">
+            <span class="text-3xl mb-3">🏭</span>
+            <span class="bg-slate-100 text-slate-500 text-xs px-3 py-1 rounded-full font-semibold mb-3">Em desenvolvimento</span>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Projeto de PCP</h3>
+            <p class="text-slate-500 text-sm leading-relaxed max-w-xs">Análise de planejamento e controle da produção com foco em capacidade e cumprimento do plano.</p>
           </div>
 
+          <div class="rounded-2xl border-2 border-dashed border-slate-200 p-8 flex flex-col items-center justify-center text-center reveal">
+            <span class="text-3xl mb-3">⚙️</span>
+            <span class="bg-slate-100 text-slate-500 text-xs px-3 py-1 rounded-full font-semibold mb-3">Em desenvolvimento</span>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Automação de Processos</h3>
+            <p class="text-slate-500 text-sm leading-relaxed max-w-xs">Automação de tarefas repetitivas da rotina operacional com Python.</p>
+          </div>
+
+        </div>
         </div>
       </section>
 
       <!-- Contact Section -->
-      <section id="contato" class="container mx-auto py-20 px-6 max-w-5xl text-center">
+      <section id="contato" class="container mx-auto py-20 px-6 max-w-5xl text-center reveal">
         <h2 class="text-3xl font-bold tracking-tight text-slate-900 mb-4">Vamos Conectar?</h2>
         <p class="text-slate-600 mb-8 max-w-md mx-auto">Estou aberto a oportunidades na área de Análise de Dados, Business Intelligence e Logística Analítica.</p>
-        <div class="flex justify-center space-x-6 mb-12">
+        <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 mb-12 max-w-xs sm:max-w-none mx-auto">
+          <a href="mailto:fael.rn89@gmail.com" class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-xl shadow-sm transition">✉️ E-mail</a>
           <a href="https://www.linkedin.com/in/rafael-r-nunes" target="_blank" rel="noopener noreferrer" class="bg-slate-100 hover:bg-blue-50 text-blue-700 font-medium px-6 py-3 rounded-xl border border-slate-200 transition">LinkedIn</a>
           <a href="https://github.com/Fael-Rodrigues" target="_blank" rel="noopener noreferrer" class="bg-slate-100 hover:bg-slate-200 text-slate-800 font-medium px-6 py-3 rounded-xl border border-slate-200 transition">GitHub</a>
+          <!-- Currículo: para atualizar, basta substituir o arquivo curriculo.pdf mantendo o mesmo nome -->
+          <a href="curriculo.pdf" download="Rafael-Rodrigues-Curriculo.pdf" class="bg-slate-100 hover:bg-slate-200 text-slate-800 font-medium px-6 py-3 rounded-xl border border-slate-200 transition">📄 Currículo (PDF)</a>
+        </div>
+        <div class="flex flex-col sm:flex-row justify-center gap-2 sm:gap-6 text-sm text-slate-500 -mt-6 mb-12">
+          <a href="mailto:fael.rn89@gmail.com" class="hover:text-blue-700 transition">fael.rn89@gmail.com</a>
+          <a href="mailto:rafael_r_nunes@hotmail.com" class="hover:text-blue-700 transition">rafael_r_nunes@hotmail.com</a>
         </div>
       </section>
 
       <!-- Footer -->
       <footer class="w-full py-6 bg-slate-950 text-slate-400 text-center text-xs">
-        <p>&copy; 2026 Rafael Rodrigues. Desenvolvido para portfólio profissional.</p>
+        <p>&copy; <span id="ano">2026</span> Rafael Rodrigues. Desenvolvido para portfólio profissional.</p>
       </footer>
+
+      <script>
+        // Ano do rodapé sempre atualizado
+        document.getElementById('ano').textContent = new Date().getFullYear();
+
+        // Menu do celular
+        const menuBtn = document.getElementById('menu-btn');
+        const menu = document.getElementById('menu-mobile');
+        function toggleMenu(open) {
+          menu.classList.toggle('hidden', !open);
+          document.getElementById('icon-open').classList.toggle('hidden', open);
+          document.getElementById('icon-close').classList.toggle('hidden', !open);
+          menuBtn.setAttribute('aria-expanded', open);
+        }
+        menuBtn.addEventListener('click', () => toggleMenu(menu.classList.contains('hidden')));
+        menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleMenu(false)));
+
+        // Animação ao rolar
+        const io = new IntersectionObserver(entries => {
+          entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+      </script>
 
 </body>
 </html>
